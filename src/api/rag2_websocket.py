@@ -3,7 +3,7 @@ import json
 import tornado.websocket
 
 
-class Rag2WebsocketHandler(tornado.websocket.WebSocketHandler):
+class Rag2Websocket(tornado.websocket.WebSocketHandler):
     def check_origin(self, origin):
         return True
 
