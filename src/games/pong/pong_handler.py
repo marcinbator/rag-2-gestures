@@ -2,7 +2,7 @@ import json
 import random
 
 from api.rag2_websocket import Rag2Websocket
-from games.pong.models.pong_gestures import get_move_from_gesture
+from games.pong.models.pong_gestures import get_pong_move_from_gesture
 
 
 class PongRandom(Rag2Websocket):
@@ -28,5 +28,5 @@ class PongBot(Rag2Websocket):
 
 class PongGestures(Rag2Websocket):
     def send_data(self, receivedData):
-        move = get_move_from_gesture()
+        move = get_pong_move_from_gesture()
         self.write_message(json.dumps({'move': move}))

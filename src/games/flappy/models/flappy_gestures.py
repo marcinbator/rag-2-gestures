@@ -4,7 +4,7 @@ import mediapipe as mp
 gesture_move = 0
 
 
-def pong_start_gesture_recognition():
+def flappy_start_gesture_recognition():
     global gesture_move
 
     mp_hands = mp.solutions.hands
@@ -36,9 +36,9 @@ def pong_start_gesture_recognition():
 
                     if previous_y is not None:
                         if current_y < previous_y - 0.02:
-                            gesture_move = 1
+                            gesture_move = 0
                         elif current_y > previous_y + 0.02:
-                            gesture_move = -1
+                            gesture_move = 1
                         else:
                             gesture_move = 0
 
@@ -53,5 +53,5 @@ def pong_start_gesture_recognition():
     cv2.destroyAllWindows()
 
 
-def get_pong_move_from_gesture():
+def get_flappy_move_from_gesture():
     return gesture_move
