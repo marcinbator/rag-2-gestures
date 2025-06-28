@@ -30,10 +30,10 @@ def launch_models():
     happy_gest_thread = threading.Thread(target=happy_start_gesture_recognition)
     skijump_gest_thread = threading.Thread(target=skijump_start_gesture_recognition)
 
-    # pong_gest_thread.start()
+    pong_gest_thread.start()
     # flappy_gest_thread.start()
     # happy_gest_thread.start()
-    skijump_gest_thread.start()
+    # skijump_gest_thread.start()
 
 
 if __name__ == "__main__":

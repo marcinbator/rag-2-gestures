@@ -28,5 +28,5 @@ class PongBot(Rag2Websocket):
 
 class PongGestures(Rag2Websocket):
     def send_data(self, receivedData):
-        move = get_pong_move_from_gesture()
+        move = get_pong_move_from_gesture(receivedData)
         self.write_message(json.dumps({'move': move}))
